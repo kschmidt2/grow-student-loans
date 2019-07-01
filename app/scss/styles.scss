@@ -37,13 +37,10 @@ a {
   padding: 0;
 }
 
-#chart-container {
+#chart-container, #chart-container-2 {
   width: 100%;
   height: 300px;
   margin-top: -10px;
-  @include sm-md-xl {
-    height: 400px;
-  }
 }
 
 #chart-area {

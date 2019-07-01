@@ -83,10 +83,30 @@
   .highcharts-yaxis-labels {
     fill: $slate-secondary-5;
     // use this to change the axis label
-    & span:first-child {
+    & span:last-child {
+      background-color: white;
+      padding-right: 10px;
+      margin-left: 53px !important;
       &:after {
-        content: "%";
+        content: " trillion";
+      }
+      &:before {
+        content: "$"
+      }
     }
+  }
+
+  #chart-container-2 {
+    & .highcharts-yaxis-labels {
+      & span:last-child {
+        margin-left: 22px !important;
+        &:after {
+          content: "%";
+        }
+        &:before {
+          content: ""
+        }
+      }
     }
   }
   
@@ -94,7 +114,7 @@
     fill: none;
     stroke: $slate-secondary-3;
   }
-  
+
   .highcharts-xaxis-grid .highcharts-grid-line {
     stroke-width: 0px;
   }
@@ -204,28 +224,28 @@
   /* Series options */
   /* Default colors */
   .highcharts-color-0 {
-    fill: $green-primary;
-    stroke: $green-primary;
-  }
-  
-  .highcharts-color-1 {
     fill: $slate-secondary-3;
     stroke: $slate-secondary-3;
   }
   
+  .highcharts-color-1 {
+    fill: $slate-secondary-4;
+    stroke: $slate-secondary-4;
+  }
+  
   .highcharts-color-2 {
-    fill: $purple-primary;
-    stroke: $purple-primary;
+    fill: $green-secondary-2;
+    stroke: $slate-secondary-5;
   }
   
   .highcharts-color-3 {
-    fill: $yellow-primary;
-    stroke: $yellow-primary;
+    fill: $green-secondary-4;
+    stroke: $green-primary;
   }
   
   .highcharts-color-4 {
-    fill: $blue-primary;
-    stroke: $blue-primary;
+    fill: $green-secondary-6;
+    stroke: $green-secondary-6;
   }
   
   .highcharts-color-5 {
@@ -260,7 +280,8 @@
   
   .highcharts-markers {
     stroke-width: 1px;
-    stroke: #ffffff;
+    stroke: $slate-secondary-6;
+    fill: #ffffff;
   }
   
   .highcharts-point {
@@ -400,6 +421,12 @@
   
   .highcharts-legend-item:hover text {
     fill: #000000;
+  }
+
+  .highcharts-legend-item {
+    & .highcharts-graph {
+      display: none;
+    }
   }
   
   .highcharts-legend-item-hidden * {

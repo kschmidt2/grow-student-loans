@@ -24,7 +24,7 @@ h3.chart-title {
     text-transform: uppercase;
     font-size: 14px;
     // bottom margin should be 30px if there is no legend
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     @include sm-md-xl {
         // set this only if there is a chart title + legend
         margin-bottom: -23px;
@@ -48,7 +48,7 @@ h3.chart-title {
     text-transform: uppercase;
     color: $slate-secondary-5;
     letter-spacing: 1px;
-    width: 65%;
+    width: 70%;
     @include sm-md-xl {
         width: 80%;
         font-size: 10px;
