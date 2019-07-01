@@ -174,7 +174,12 @@ document.addEventListener('DOMContentLoaded', function () {
             enabled: false
           },
           xAxis: {
-            tickInterval: 4
+            labels: {
+              formatter: function formatter() {
+                return "'" + this.value.substr(5, 6);
+                ;
+              }
+            }
           }
         }
       }]
